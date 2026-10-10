@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<cmd>Explore<CR>")
+vim.keymap.set("n", "<leader>cc", function()
+    vim.wo.colorcolumn = vim.wo.colorcolumn == "" and "80" or ""
+end)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -27,6 +30,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- actions
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename,      opts) -- rename symbol
         vim.keymap.set({"n","v"}, "<leader>ca", vim.lsp.buf.code_action, opts) -- code action
-        vim.keymap.set("n", "<leader>f",  function() vim.lsp.buf.format({ async = true }) end, opts)
     end,
 })

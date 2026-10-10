@@ -13,8 +13,8 @@ vim.opt.smartindent = true
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cpp",
   callback = function()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
     vim.opt_local.expandtab = true
   end,
 })
@@ -32,6 +32,7 @@ vim.opt.showmode = false
 -- vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
+vim.opt.colorcolumn = "80"
 
 -- splits
 vim.opt.splitright = true
