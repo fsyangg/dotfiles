@@ -32,7 +32,7 @@ vim.opt.showmode = false
 -- vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 -- splits
 vim.opt.splitright = true

@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", "<cmd>Explore<CR>")
+vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
 vim.keymap.set("n", "<leader>cc", function()
-    vim.wo.colorcolumn = vim.wo.colorcolumn == "" and "80" or ""
+    vim.wo.colorcolumn = vim.wo.colorcolumn == "" and "120" or ""
 end)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
