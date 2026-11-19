@@ -32,6 +32,7 @@ return {
                 ["<C-f>"]     = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping.complete(),          -- manually trigger menu
                 ["<CR>"]      = cmp.mapping.confirm({ select = false }),  -- enter accepts only if you've explicitly selected
+                ["<C-y>"]     = cmp.mapping.confirm({ select = true }),
             }),
 
             sources = cmp.config.sources({
